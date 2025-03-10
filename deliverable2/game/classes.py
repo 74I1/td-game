@@ -3,7 +3,7 @@
 #health = 10
 #attack = 2
 import time
-import pygame
+#import pygame
 #screen = pygame.display.set_mode((1280, 720))
 
 class enemy:
@@ -94,7 +94,7 @@ def Triangle_tile_left( XNew ):
     global XGlobal
     XGlobal = XNew - z          # z represents the enemy speed attribute    XGlobal represents the intital position        XNew represents the new position after the affect of the movement tiles
     print("done left")               # don't know why this executes twice
-    return(XGlobal)             # XNew is subtracted twice by z
+    return(XGlobal)             # XNew is subtracted by z
     
 
 def Triangle_tile_right(XNew):
@@ -116,18 +116,23 @@ def Triangle_tile_down(YNew):
     print("done down")
     return(YGlobal)
  
-    
+'''
 Triangle_tile_right(70)
 Triangle_tile_left(70)
 Triangle_tile_up(70)
 Triangle_tile_down(70)
-
+'''
+#print (Triangle_tile_left(XGlobal), YGlobal )
 print (Triangle_tile_left(XGlobal), YGlobal )
+print (Triangle_tile_left(XGlobal), YGlobal )
+print (Triangle_tile_left(XGlobal), YGlobal )
+print (XGlobal, Triangle_tile_up(YGlobal) )
+
 
 
 
 '''
 print (Triangle_tile_left( XGlobal  ) )
 print (Triangle_tile_left( XGlobal  ) )  # repeated the code three times to test if the are consistant. 
-print (Triangle_tile_left( XGlobal  ) )  # the value is subtracted twice on the initial print function but functions are then consistant with the second and third
+print (Triangle_tile_left( XGlobal  ) )
 '''
