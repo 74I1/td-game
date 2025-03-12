@@ -1,4 +1,5 @@
 
+
 #speed = 5
 #health = 10
 #attack = 2
@@ -8,7 +9,7 @@ import time
 
 class enemy:
     def __init__(self,name,speed,attack, drop):   #the default framework for the enemy class with name, move speed, attack damage and drops
-        self.name = name
+        self.name = name                          # enemies should also have sprite boxes which work withh the Collistion functions
         self.speed = speed
         self.attack = attack
         self.drop = drop
@@ -81,7 +82,6 @@ print(Square.cost)
 XGlobal = 30
 YGlobal = 30
 
-z = 2
 
 
 
@@ -92,28 +92,28 @@ z = 2
 
 def Triangle_tile_left( XNew ):
     global XGlobal
-    XGlobal = XNew - z          # z represents the enemy speed attribute    XGlobal represents the intital position        XNew represents the new position after the affect of the movement tiles
-    print("done left")               # don't know why this executes twice
-    return(XGlobal)             # XNew is subtracted by z
+    XGlobal = XNew - Triangle.speed        # Triangle.speed represents the enemy speed attribute    XGlobal represents the intital position        XNew represents the new position after the affect of the movement tiles
+   # print("done left")               
+    return(XGlobal)             # XNew is subtracted by Triangle.speed
     
 
 def Triangle_tile_right(XNew):
     global XGlobal
-    XGlobal = XNew + z
-    print("done right")
+    XGlobal = XNew + Triangle.speed
+  #  print("done right")
     return(XGlobal)
 
 
 def Triangle_tile_up(YNew):
     global YGlobal
-    YGlobal = YNew + z
-    print("done up")
+    YGlobal = YNew + Triangle.speed
+   # print("done up")
     return(YGlobal)
 
 def Triangle_tile_down(YNew):
     global YGlobal
-    YGlobal = YNew - z
-    print("done down")
+    YGlobal = YNew - Triangle.speed
+   # print("done down")
     return(YGlobal)
  
 '''
@@ -123,16 +123,36 @@ Triangle_tile_up(70)
 Triangle_tile_down(70)
 '''
 #print (Triangle_tile_left(XGlobal), YGlobal )
-print (Triangle_tile_left(XGlobal), YGlobal )
-print (Triangle_tile_left(XGlobal), YGlobal )
-print (Triangle_tile_left(XGlobal), YGlobal )
-print (XGlobal, Triangle_tile_up(YGlobal) )
+'''
+Triangle_tile_left(XGlobal)
+Triangle_tile_left(XGlobal)
+Triangle_tile_left(XGlobal)
+Triangle_tile_up(YGlobal) 
+Triangle_tile_right(XGlobal)
+print( XGlobal, YGlobal)
+'''
+
+def Collision_left():
+    pass #the function detects if the x and y coordinates of the enemy 
+
+def Collision_rignt():
+    pass
+
+def Collision_down():
+    pass
+
+def Collision_up():
+    pass
 
 
 
+while Collision_left == True:
+    Triangle_tile_left(XGlobal)
+    print(XGlobal)
+    if Collision_left == False:
+        break
 
 '''
 print (Triangle_tile_left( XGlobal  ) )
 print (Triangle_tile_left( XGlobal  ) )  # repeated the code three times to test if the are consistant. 
 print (Triangle_tile_left( XGlobal  ) )
-'''
