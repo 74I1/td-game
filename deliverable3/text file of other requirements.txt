@@ -1,0 +1,76 @@
+
+[copyright &  other concerns]
+-This code will be set to a hypothetical open source liscence which can be freely distributed and modified by anyone with access
+-addressing ethical conserns would be have the hypothetical instructions for the controls be in different languages in order to accommodate more diversity
+
+[Approach to error handling]
+-using print statements to check which part of the code is executed and how many times 
+
+
+
+Psudo code of enemy path
+
+
+-detection of enemy on path
+
+
+-get enemy position in x and y coordinates 
+
+
+-how will the enemy know what path is it on
+
+
+-move the enemy up, down, left, right in x and y coordinates based on the conditions of the path
+s = enemy speed
+x = x coordinates
+y = y coordinates
+
+up: (x, y+s)
+down: (x, y-s)
+right: (x+s, y)
+left: (x-s, y)
+
+uptates the initial position to the new value
+
+
+-enemy will move at different speeds based on their speed attributes of enemy.speed 
+
+
+-in a loop so that the enemy constantly moves while on the indicated path
+
+
+
+puduo code for updating enemy movenment
+
+collision detects of whether the enemy is on which type of path. e.g. right, up...
+enemies will appear on a set path which will determine their direction
+--------
+collision_down
+collision_up
+collision_right
+
+Triangle.speed    The speed of the enemy Triangle of the class
+
+
+
+
+X represents the current updated position of the x coordinates
+Y represents the current updated position of the y coordinates
+
+WHILE collision_down:
+  X -= Triangle.speed
+  ELSE: 
+    BREAK
+
+WHILE collision_up:
+  X += Triangle.speed
+  ELSE: 
+    BREAK
+
+WHILE collision_right:
+  Y += Triangle.speed
+  ELSE: 
+    BREAK
+
+  
+  
